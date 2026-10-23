@@ -453,6 +453,19 @@ body[data-page="professor"] #background .kv { margin-top: 44px; }
   .pub__title { font-size: 1rem; }
   .kv > div { grid-template-columns: 1fr; gap: 4px; }
 }
+/* 그림 클릭 확대 (Research·Projects, site.js 가 .zoom 을 만든다) */
+.is-zoomable { cursor: zoom-in; }
+.zoom { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 64px 28px 32px; background: rgba(255, 255, 255, 0.97); cursor: zoom-out; }
+.zoom[hidden] { display: none; }
+.zoom__img { display: block; width: auto; height: auto; max-width: min(1400px, 100%); max-height: calc(100vh - 160px); border: 1px solid var(--rule); background: #fff; }
+.zoom__cap { margin-top: 14px; max-width: 72ch; font-size: var(--text-caption); line-height: 1.65; color: var(--muted); text-align: center; }
+.zoom__close { position: absolute; top: 18px; right: 28px; padding: 2px 0; font: inherit; font-size: var(--text-small); color: var(--ink); background: none; border: 0; border-bottom: 1px solid var(--ink); cursor: pointer; }
+body.is-zoomed { overflow: hidden; }
+@media (max-width: 720px) {
+  .zoom { padding: 56px 16px 24px; }
+  .zoom__img { max-height: calc(100vh - 140px); }
+  .zoom__close { right: 16px; }
+}
 @media print {
   .nav, .footer__bottom { display: none; }
 }

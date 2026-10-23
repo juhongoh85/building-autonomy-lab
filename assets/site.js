@@ -91,4 +91,65 @@
       }
     });
   }
+
+  /* 그림 클릭 확대 — Research·Projects 의 <figure class="fig"> 그림.
+     클릭(또는 Enter)하면 화면 가득 보여주고, 아무 곳이나 클릭·Esc·닫기 로 돌아옵니다. 홈의 비전 그림은 대상이 아닙니다. */
+  if (cur === "research" || cur === "projects") {
+    var zoomables = document.querySelectorAll("main .fig img");
+    if (zoomables.length) {
+      var zoom = document.createElement("div");
+      zoom.className = "zoom";
+      zoom.setAttribute("role", "dialog");
+      zoom.setAttribute("aria-modal", "true");
+      zoom.setAttribute("aria-label", "그림 확대");
+      zoom.hidden = true;
+      zoom.innerHTML = '<button class="zoom__close" type="button">닫기 ×</button>' +
+                       '<img class="zoom__img" alt="">' +
+                       '<p class="zoom__cap"></p>';
+      document.body.appendChild(zoom);
+      var zoomImg = zoom.querySelector(".zoom__img");
+      var zoomCap = zoom.querySelector(".zoom__cap");
+      var zoomClose = zoom.querySelector(".zoom__close");
+      var zoomFrom = null;
+
+      function openZoom(img) {
+        var fig = img.closest("figure");
+        var cap = fig ? fig.querySelector("figcaption") : null;
+        zoomImg.src = img.currentSrc || img.src;
+        zoomImg.alt = img.alt || "";
+        zoomCap.textContent = cap ? cap.textContent : (img.alt || "");
+        zoomCap.hidden = !zoomCap.textContent;
+        zoom.hidden = false;
+        document.body.classList.add("is-zoomed");
+        zoomFrom = img;
+        zoomClose.focus();
+      }
+      function closeZoom() {
+        zoom.hidden = true;
+        document.body.classList.remove("is-zoomed");
+        zoomImg.removeAttribute("src");
+        if (zoomFrom) zoomFrom.focus();
+        zoomFrom = null;
+      }
+
+      Array.prototype.forEach.call(zoomables, function (img) {
+        img.classList.add("is-zoomable");
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+        img.addEventListener("click", function () {
+          if (!img.closest(".is-missing")) openZoom(img);
+        });
+        img.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            if (!img.closest(".is-missing")) openZoom(img);
+          }
+        });
+      });
+      zoom.addEventListener("click", closeZoom);
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !zoom.hidden) closeZoom();
+      });
+    }
+  }
 })();
