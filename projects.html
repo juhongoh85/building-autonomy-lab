@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects — 준비중 — 건축설비 자율화 연구실</title>
-<meta name="description" content="Projects 준비중.">
+<title>Projects — 건축설비 자율화 연구실</title>
+<meta name="description" content="건축설비 자율화 연구실 오주홍 교수의 주요 과제 참여 이력과 결과물. 물리 모델과 운영 데이터를 활용한 건물·설비 모델링, Digital Twin, 이상진단, 운전 전략 연구와 설계·성능평가 도구 개발 경험을 소개합니다.">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
@@ -13,14 +13,261 @@
 <div id="site-nav"></div>
 
 <main>
+
+<!-- ============ 페이지 머리 ============ -->
 <section class="section section--flush">
   <div class="wrap">
     <div class="sec-head sec-head--stack">
       <span class="kicker">Projects</span>
-      <h1>준비중</h1>
+      <h1>현장의 데이터를 모델링·진단·제어로 연결합니다</h1>
+      <p class="lead" style="max-width:66ch">오주홍 교수가 참여한 국가 R&amp;D·산학협력 과제와 개발 도구를 소개합니다. 물리 모델과 운영 데이터를 활용한 건물·설비 모델링, 운영 진단, 운전 전략 연구와 설계·성능평가 도구 개발 경험을 담았습니다.</p>
     </div>
   </div>
 </section>
+
+<!-- ============ 01 주요 참여 과제 ============ -->
+<section class="section" id="key-projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">01 · Key Projects</span>
+      <div>
+        <h2>주요 참여 과제</h2>
+        <p>건물·설비의 성능 예측, 운영 진단, 제어 전략 연구에 참여한 과제입니다.</p>
+      </div>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2026.10 – 현재</b>한국인터넷진흥원(KISA)<br>주관 에스큐아이소프트(주)</div>
+      <div>
+        <h3>마이데이터 기반 지능형 누진요금 예측 및 사전경보 서비스</h3>
+        <p>현재 수행 중인 과제입니다. 주택용 전기 사용량 마이데이터로 누진 구간 진입을 미리 예측하고 알리는 서비스의 분석 엔진을 개발합니다. 요금 계산식에 청구·검침 이력을 결합해 가구별 사용량을 예측하는 방식으로, 하이브리드 예측 연구를 가구 단위로 넓힌 것입니다.</p>
+        <ul>
+          <li>가구별 전기 사용량 예측과 누진 단계 상향 판정</li>
+          <li>요금 계산식과 실제 사용 이력을 결합한 예측 엔진</li>
+          <li>사전경보 서비스용 분석 모듈 설계</li>
+        </ul>
+      </div>
+      <figure class="fig fig--photo">
+        <img src="assets/img/project-mydata-service.png" alt="" onerror="this.parentNode.classList.add('is-missing')">
+        <div class="fig__ph"><span class="fig__ph-tag">MyData service</span><span class="fig__ph-note">누진요금 예측 서비스 · 이미지 준비 중</span></div>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2025년 참여</b>환경부</div>
+      <div>
+        <h3>수열원 변동 대응 대규모 중앙집중형 수열에너지 실증플랜트 기술 개발</h3>
+        <p>수열원의 온도 변화에 대응하는 대규모 히트펌프 시스템의 모델링과 최적제어 연구에 참여했습니다. 히트펌프·축열·건물 부하를 연계한 실증플랜트의 운전 전략을 검토하는 연구입니다.</p>
+        <ul>
+          <li>수열 히트펌프 시스템의 물리 기반 모델링</li>
+          <li>축열과 연계한 운전 전략·제어 알고리즘 검토</li>
+          <li>실증플랜트 적용을 위한 시스템 모델 연계</li>
+        </ul>
+      </div>
+      <figure class="fig fig--photo">
+        <img src="assets/img/project-hydrothermal-plant.jpg" alt="" onerror="this.parentNode.classList.add('is-missing')">
+        <div class="fig__ph"><span class="fig__ph-tag">Hydrothermal energy</span><span class="fig__ph-note">수열에너지 실증플랜트 · 사진 준비 중</span></div>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2021.05 – 2026.04</b>한국에너지기술평가원</div>
+      <div>
+        <h3>자율운전 기반 지능형 건물 에너지 환경 통합 관리시스템(iBEEMS) 개발</h3>
+        <p>박사학위 연구의 기반이 된 과제입니다. 15층 사무용 건물의 BAS 운영 데이터와 설비 사양을 물리 모델에 연결해 Digital Twin을 구축했습니다. 이를 학습 환경으로 활용한 강화학습 제어는 Digital Twin 내 평가에서 기존 규칙 기반 제어 대비 가스 소비량을 약 23% 줄였습니다.</p>
+        <ul>
+          <li>부분 보정과 정격 성능을 결합한 TRNSYS 통합 모델</li>
+          <li>SINN 하이브리드 모델과 대리모델 기반 Digital Twin</li>
+          <li>PPO 기반 다중 에이전트의 보일러 운전 전략 학습·평가</li>
+        </ul>
+      </div>
+      <figure class="fig fig--frame" style="--ar:1/1">
+        <img src="assets/img/fig-hvac-system-boilers.png" alt="실증 건물 HVAC 시스템 구성도" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>실증 건물의 HVAC 시스템 구성<span class="src">Oh et al., J. Build. Eng. 120 (2026)</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2021.09 – 2022.07</b>한국건물에너지기술원</div>
+      <div>
+        <h3>설비상태진단을 위한 TRNSYS 모델 개발 및 학습기반 시스템 모델링</h3>
+        <p>HVAC 이상진단(FDD)에 활용할 물리 모델과 데이터 기반 모델을 개발했습니다. 관련 연구로 BEMS 운영 데이터 기반 진단 프레임워크 논문(설비공학 논문집, 2026)과 특허 「HVAC 시스템의 고장 진단 방법 및 이를 이용한 장치」(2024)가 있습니다.</p>
+      </div>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="assets/img/fig-fdd-framework.png" alt="BEMS 데이터 기반 운영 진단 프레임워크" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>BEMS 데이터 기반 운영 진단 프레임워크<span class="src">오주홍 외, 설비공학 논문집 38(2) (2026)</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2025.05 – 2025.11</b>한국에너지공단</div>
+      <div>
+        <h3>제로에너지건축물 실태조사 및 모니터링 운영개선 지원</h3>
+        <p>BEMS 운영 데이터로 제로에너지건축물의 설비 상태와 에너지 사용 특성을 진단하고, 모니터링 체계와 운전 방식의 개선 방안을 검토했습니다.</p>
+      </div>
+      <figure class="fig fig--photo">
+        <img src="assets/img/project-zeb-monitoring.jpg" alt="" onerror="this.parentNode.classList.add('is-missing')">
+        <div class="fig__ph"><span class="fig__ph-tag">ZEB monitoring</span><span class="fig__ph-note">제로에너지건축물 모니터링 · 사진 준비 중</span></div>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2024.11 – 2025.12</b>Infineon</div>
+      <div>
+        <h3>Edge device 레이더 센서 기반 재실자 낙상감지 기술 개발</h3>
+        <p>레이더 센서 데이터로 재실자의 낙상을 감지하는 경량 머신러닝(TinyML) 모델을 개발했습니다. 엣지 디바이스에서 직접 추론하는 AI 모델의 구현 경험입니다.</p>
+      </div>
+      <figure class="fig fig--photo">
+        <img src="assets/img/project-fall-detection-device.jpg" alt="" onerror="this.parentNode.classList.add('is-missing')">
+        <div class="fig__ph"><span class="fig__ph-tag">Edge AI</span><span class="fig__ph-note">레이더 기반 낙상 감지 · 사진 준비 중</span></div>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2023.06 – 2024.01</b>삼성 (산학)</div>
+      <div>
+        <h3>Digital Twin 에너지 시뮬레이터 — 설비 경년변화 추적</h3>
+        <p>시간에 따른 설비 성능 변화를 추적하는 Digital Twin 시뮬레이터 모듈을 개발했습니다. 냉동기의 설계 성능과 운영 데이터를 비교해 운전 상태와 성능 변화를 파악하는 도구입니다.</p>
+      </div>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="assets/img/shot-dt-monitoring-program.png" alt="냉동기 COP 실시간 모니터링 프로그램 화면" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>냉동기 성능(COP) 실시간 모니터링 화면. 설계 성능 범위와 현재 운전점</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 결과품·개발품 ============ -->
+<section class="section" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">02 · Results</span>
+      <div>
+        <h2>결과품·개발품</h2>
+        <p>과제에서 얻은 결과를 40초 안팎의 애니메이션으로 보여 줍니다. Play를 누르면 재생됩니다.</p>
+      </div>
+    </div>
+
+    <div class="demos">
+      <article class="demo">
+        <span class="area__no">Modeling · Calibration</span>
+        <h3 lang="en">Finding the Parameters</h3>
+        <p>입자군집 최적화가 존 RC 모델의 변수 11개를 찾아가는 과정과 보정 전후의 실내온도 오차를 비교합니다.</p>
+        <iframe class="demo__frame" src="demos/calibration/cal-demo.html" title="Calibration demo" loading="lazy"></iframe>
+      </article>
+
+      <article class="demo">
+        <span class="area__no">Operation · Fault Detection</span>
+        <h3 lang="en">Fixed vs. Adaptive Fault Detection</h3>
+        <p>같은 잔차를 고정 임계값과 적응형 기대범위로 나란히 판정해 오탐이 어떻게 줄어드는지 보여 줍니다.</p>
+        <iframe class="demo__frame" src="demos/fdd-v2/fdd-demo.html" title="Fault detection demo" loading="lazy"></iframe>
+      </article>
+
+      <article class="demo">
+        <span class="area__no">Autonomous Control · Reinforcement Learning</span>
+        <h3 lang="en">Rule-based vs. Reinforcement Learning</h3>
+        <p>같은 건물, 같은 5일을 원제어와 강화학습 제어로 나란히 운전해 가스 사용량과 실내온도를 비교합니다.</p>
+        <iframe class="demo__frame" src="demos/rl-control/rl-demo.html" title="Optimal control demo" loading="lazy"></iframe>
+      </article>
+
+      <article class="demo">
+        <span class="area__no">Other Services · Edge Device</span>
+        <h3 lang="en">Fall Detection Without a Camera</h3>
+        <p>레이더 센서와 엣지 장치로 카메라 없이 낙상을 감지하고 보호자에게 알리는 과정입니다.</p>
+        <iframe class="demo__frame" src="demos/fall-detection/fall-detection.html" title="Fall detection demo" loading="lazy"></iframe>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 산업 실무 ============ -->
+<section class="section" id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">03 · Industry Tools</span>
+      <div>
+        <h2>설계·성능평가 도구 개발</h2>
+        <p>산업체·연구기관 재직 중 개발에 참여한 실무 프로그램입니다. 건물의 물리적 특성과 설비 계산 방법을 소프트웨어로 구현해 설계와 에너지 성능평가에 활용했습니다.</p>
+      </div>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2016.11 – 2019.09</b>한국에너지기술평가원</div>
+      <div>
+        <h3>제로에너지빌딩 요소기술 패키지 융복합화 및 실증연구 — ZEB 성능평가 플랫폼</h3>
+        <p>도면을 바탕으로 공간과 설비 정보를 입력해 제로에너지빌딩의 성능을 평가하는 서비스 플랫폼을 개발했습니다. 패시브·액티브 요소기술의 정보 목록도 함께 구축했습니다.</p>
+      </div>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="assets/img/shot-zeb-performance-tool.png" alt="ZEB 성능평가 툴 화면" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>ZEB 성능평가 프로그램의 도면 기반 공간 입력 화면</figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2016.12 – 2018.09</b>한국에너지기술평가원</div>
+      <div>
+        <h3>건물용 냉난방배관·순환펌프·유량조절밸브 선정을 위한 수배관시스템 계산 프로그램 개발</h3>
+        <p>냉난방 수배관의 배관·펌프·밸브 선정을 지원하는 계산 프로그램을 개발했습니다. 개발 과정과 실무 활용 가능성 평가 결과를 학술지 논문(한국건축친환경설비학회, 2019)으로 발표했습니다.</p>
+      </div>
+      <figure class="fig fig--photo" style="--ar:16/9">
+        <img src="assets/img/project-hydronic-program.png" alt="" onerror="this.parentNode.classList.add('is-missing')">
+        <div class="fig__ph"><span class="fig__ph-tag">Hydronic system design</span><span class="fig__ph-note">수배관 설계 프로그램 · 이미지 준비 중</span></div>
+      </figure>
+    </div>
+
+    <div class="proj-row">
+      <div class="meta"><b>2017.12 – 2020.11</b>한국에너지기술평가원</div>
+      <div>
+        <h3>대형사업장의 에너지절감 리트로핏 솔루션</h3>
+        <p>대형 사업장의 에너지 성능 개선을 위해 절감 조치를 진단하고 예상 효과를 산정하는 알고리즘과 프로그램을 개발했습니다.</p>
+      </div>
+      <figure class="fig fig--photo" style="--ar:16/9">
+        <img src="assets/img/project-retrofit-solution.png" alt="" onerror="this.parentNode.classList.add('is-missing')">
+        <div class="fig__ph"><span class="fig__ph-tag">Energy retrofit</span><span class="fig__ph-note">에너지 성능 개선 프로그램 · 이미지 준비 중</span></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 전체 목록 ============ -->
+<section class="section" id="history">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">04 · Project History</span>
+      <h2>과제 참여 이력</h2>
+    </div>
+    <details open>
+      <summary>주요 국가 R&amp;D·산학협력 과제 19건 (2011년 이후)</summary>
+      <div style="overflow-x:auto;margin-top:14px">
+      <table class="table">
+        <thead><tr><th>Period</th><th>Project</th><th>Funder</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">2026.10 – 현재</td><td>마이데이터 기반 지능형 누진요금 예측 및 사전경보 서비스</td><td>한국인터넷진흥원</td></tr>
+          <tr><td class="mono">2025년 참여</td><td>수열원 변동 대응 대규모 중앙집중형 수열에너지 실증플랜트 기술 개발</td><td>환경부</td></tr>
+          <tr><td class="mono">2025.05 – 2025.11</td><td>제로에너지건축물 실태조사 및 모니터링 운영개선 지원</td><td>한국에너지공단</td></tr>
+          <tr><td class="mono">2024.11 – 2025.12</td><td>Edge device 레이더 센서 기반 재실자 낙상감지 기술 개발</td><td>Infineon</td></tr>
+          <tr><td class="mono">2023.06 – 2024.01</td><td>디지털트윈 에너지 시뮬레이터</td><td>삼성</td></tr>
+          <tr><td class="mono">2021.09 – 2022.07</td><td>설비상태진단을 위한 TRNSYS 모델 개발 및 학습기반 시스템 모델링</td><td>한국건물에너지기술원</td></tr>
+          <tr><td class="mono">2021.05 – 2026.04</td><td>자율운전 기반 지능형 건물 에너지 환경 통합 관리시스템(iBEEMS) 개발</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2020.05 – 2024.12</td><td>에너지 절감형 스마트조명 플랫폼 기술 개발 및 실증</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2020.04 – 2021.12</td><td>주택용 전력 품질데이터 AI 분석을 통한 벤치마킹 시스템 개발</td><td>국토교통과학기술진흥원</td></tr>
+          <tr><td class="mono">2019.04 – 2022.12</td><td>노후 소규모 건축물 품질 및 성능 향상을 위한 리모델링 기술 개발</td><td>국토교통과학기술진흥원</td></tr>
+          <tr><td class="mono">2018.10 – 2021.09</td><td>건물에너지 효율향상을 위한 IoT 기기간 연동 지능형 공조제어시스템</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2017.12 – 2021.05</td><td>유통 물류시설 에너지관리용 ESS 기반 융복합 제품 개발 및 실증 연구</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2017.12 – 2020.11</td><td>대형사업장의 에너지절감 리트로핏 솔루션</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2016.12 – 2018.09</td><td>건물용 냉난방배관·순환펌프·유량조절밸브 선정을 위한 수배관시스템 계산 프로그램 개발</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2016.11 – 2019.09</td><td>제로에너지빌딩 요소기술 패키지(패시브&amp;액티브) 융복합화 및 실증연구</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2016.08 – 2017.12</td><td>건물 난방 배관 세정기 기술개발</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2016.04 – 2018.12</td><td>차세대 건자재 공간단위 에너지·환경성능 시험 및 보완을 위한 실증연구</td><td>㈜LG하우시스</td></tr>
+          <tr><td class="mono">2015.06 – 2018.05</td><td>건물에너지 시뮬레이션과 스마트 미터링 기술을 활용한 중소형 건물에너지 통합진단기술 개발 및 실증</td><td>한국에너지기술평가원</td></tr>
+          <tr><td class="mono">2011.09 – 2014.12</td><td>건물에너지 성능 평가모델 및 성능개선 프로세스 표준화 개발</td><td>국토교통부 (단국대학교)</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </details>
+  </div>
+</section>
+
 </main>
 
 <div id="site-footer"></div>
