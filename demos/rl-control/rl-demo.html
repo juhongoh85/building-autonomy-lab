@@ -16,9 +16,9 @@
     src: url("../../assets/fonts/PretendardVariable.woff2") format("woff2");
   }
   :root { --ink: #20262d; --muted: #66707a; --rule: #e0e4e8; --accent: #1e5fa8; --paper: #fff; }
-  html, body { margin: 0; background: var(--paper); }
+  html, body { margin: 0; background: var(--paper); overflow: hidden; }
   body { font-family: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; color: var(--ink); }
-  .fdd { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
+  .fdd { position: relative; box-sizing: border-box; width: 100%; aspect-ratio: 16 / 9; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
   .fdd canvas { display: block; width: 100%; height: 100%; }
   .fdd__ctl { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; background: rgba(255,255,255,0.0); cursor: pointer; border: 0; padding: 0; }
   .fdd__ctl span { position: absolute; top: 79%; left: 50%; transform: translateX(-50%); white-space: nowrap; display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; font: 500 15px/1 "Pretendard Variable", sans-serif; letter-spacing: 0.02em; color: var(--accent); border: 1px solid var(--accent); background: rgba(255,255,255,0.92); }
