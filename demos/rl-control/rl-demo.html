@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimal control demo — rule-based vs reinforcement learning</title>
+<meta name="description" content="Optimal control demo: a two-boiler heating plant run by its original rule-based logic and by a reinforcement-learning agent, side by side in the same digital twin for the same five winter days. Less gas, balanced boiler run time, same room temperature.">
+<style>
+  @font-face {
+    font-family: "Pretendard Variable";
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: block;
+    src: url("../../assets/fonts/PretendardVariable.woff2") format("woff2");
+  }
+  :root { --ink: #20262d; --muted: #66707a; --rule: #e0e4e8; --accent: #1e5fa8; --paper: #fff; }
+  html, body { margin: 0; background: var(--paper); }
+  body { font-family: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; color: var(--ink); }
+  .fdd { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
+  .fdd canvas { display: block; width: 100%; height: 100%; }
+  .fdd__ctl { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; background: rgba(255,255,255,0.0); cursor: pointer; border: 0; padding: 0 0 14%; }
+  .fdd__ctl span { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; font: 500 15px/1 "Pretendard Variable", sans-serif; letter-spacing: 0.02em; color: var(--accent); border: 1px solid var(--accent); background: rgba(255,255,255,0.92); }
+  .fdd__ctl span::before { content: ""; width: 0; height: 0; border-left: 11px solid var(--accent); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+  .fdd.is-playing .fdd__ctl { display: none; }
+  .fdd__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--rule); }
+  .fdd__bar i { display: block; height: 100%; width: 0; background: var(--accent); }
+  /* still mode: used for frame capture — canvas fills the viewport exactly */
+  body.still .fdd { width: 100vw; height: 100vh; aspect-ratio: auto; border: 0; }
+  body.still .fdd__ctl, body.still .fdd__bar { display: none; }
+</style>
+</head>
+<body>
+  <div class="fdd" id="fdd">
+    <canvas id="fdd-canvas" aria-label="Optimal control animation: rule-based versus reinforcement learning boiler control"></canvas>
+    <button class="fdd__ctl" id="fdd-play" type="button" aria-label="Play"><span>Play</span></button>
+    <div class="fdd__bar" aria-hidden="true"><i id="fdd-bar"></i></div>
+  </div>
+  <script src="rl-data.js"></script>
+  <script src="rl-demo.js" data-src="rl-data.json"></script>
+</body>
+</html>
