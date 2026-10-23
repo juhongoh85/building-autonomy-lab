@@ -63,7 +63,7 @@
     <div class="figs-1">
       <figure class="fig">
         <img src="assets/img/fig-ra-temp-cases.png" alt="다섯 조건에서의 실내 온도 예측 결과" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>다섯 가지 초기 조건에서 비교한 실내 환기 공기온도 예측 결과<span class="src">Oh et al., Appl. Therm. Eng. 281 (2025)</span></figcaption>
+        <figcaption>파라미터 bound 변화에 따른 최적화과정</figcaption>
       </figure>
     </div>
     <h3>운영 데이터 기반 이상진단</h3>
@@ -71,16 +71,16 @@
     <div class="figs-2">
       <figure class="fig fig--frame" style="--ar:16/9">
         <img src="assets/img/fig-fdd-framework.png" alt="BEMS 데이터 기반 운영 진단 프레임워크" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>BEMS 데이터 기반 건물 운영 진단 프레임워크. 데이터 준비 → 상태 진단 → 운영 지침<span class="src">오주홍 외, 설비공학 논문집 38(2) (2026)</span></figcaption>
+        <figcaption>BEMS 데이터 기반 건물 운영 진단 프레임워크</figcaption>
       </figure>
       <figure class="fig fig--frame" style="--ar:16/9">
         <img src="assets/img/fig-fdd-overcooling-classification.png" alt="과냉 발생 경로 분류" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>과냉 발생 경로의 분류와 조건부 확률<span class="src">오주홍 외, 설비공학 논문집 38(2) (2026)</span></figcaption>
+        <figcaption>과냉 발생 경로의 분류와 조건부 확률</figcaption>
       </figure>
     </div>
     <div class="numbers">
-      <div><b>R² 0.96</b><span>일별 열원 에너지 소비량 예측 설명력 · JBE 2023</span></div>
-      <div><b>약 1/10</b><span>AHU 가열률 예측오차 · 순차 보정 대비 최대 개선 사례 · ATE 2025</span></div>
+      <div><b>R² 0.96</b><span>일별 열원 에너지 소비량 예측 설명력</span></div>
+      <div><b>약 1/10</b><span>AHU 가열률 예측오차 · 순차 보정 대비 최대 개선 사례</span></div>
       <div><b>센서 추가 없음</b><span>기존 공조기 데이터와 설계 사양을 활용한 모델 구축</span></div>
     </div>
   </div>
@@ -100,17 +100,15 @@
   </aside>
   <div class="topic__body">
     <h3>연구 문제</h3>
-    <p>물리 모델은 실제 건물의 모든 특성을 재현하기 어렵고, 데이터 기반 모델은 학습하지 않은 운전 조건에서 예측 정확도가 낮아질 수 있습니다. 물리 모델과 운영 데이터를 결합해 제한된 데이터 환경에서도 예측 범위를 넓히는 Digital Twin을 연구합니다.</p>
-    <h3>연구 방법</h3>
-    <p>물리 시뮬레이션 결과를 신경망의 입력으로 제공하고 실측값과의 차이를 학습하는 하이브리드 모델(SINN, Simulation-Informed Neural Network)을 개발합니다. 물리 관계가 반영된 시뮬레이션과 운영 데이터를 함께 활용하고, 학습에 사용하지 않은 조건에서 예측 성능을 검증합니다. 건물·코일·축열조의 모델을 연계해 설비 간 상호작용을 재현하는 통합 시뮬레이션도 연구합니다.</p>
+    <p>물리 모델은 실제 건물의 특성을 재현하기 어렵고, 데이터 기반 모델은 학습하지 않은 운전 조건에서 예측 정확도가 낮아질 수 있습니다. 물리 모델과 운영 데이터를 결합해 제한된 데이터 환경에서도 예측 범위를 넓히는 Digital Twin을 연구합니다.</p>
     <div class="figs-2">
       <figure class="fig fig--frame" style="--ar:16/9">
         <img src="assets/img/fig-sinn-concept.png" alt="SINN 개념도" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>실측 데이터와 시뮬레이션 모델을 결합하는 SINN의 개념<span class="src">Oh et al., Energy Build. 324 (2024)</span></figcaption>
+        <figcaption>실측 데이터와 시뮬레이션 모델을 결합하는 SINN의 개념</figcaption>
       </figure>
       <figure class="fig fig--frame" style="--ar:16/9">
         <img src="assets/img/fig-hybrid-vs-blackbox.png" alt="블랙박스 모델과 하이브리드 모델의 외삽 비교" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>학습에 사용하지 않은 기간의 실내 온도 예측 비교. 데이터 기반 모델(위)과 하이브리드 모델(아래)<span class="src">Oh et al., Energy Build. 324 (2024)</span></figcaption>
+        <figcaption>학습에 사용하지 않은 기간의 실내 온도 예측 비교. 데이터 기반 모델(위)과 하이브리드 모델(아래)</figcaption>
       </figure>
     </div>
     <h3>적용 사례: 냉방용 축열 시스템</h3>
@@ -118,17 +116,17 @@
     <div class="figs-2">
       <figure class="fig fig--frame" style="--ar:16/9">
         <img src="assets/img/fig-tes-charging-discharging.png" alt="축열 시스템 충전·방열 모드" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>냉방용 축열(TES) 시스템의 충전·방열 모드<span class="src">Oh et al., Appl. Therm. Eng. (2026)</span></figcaption>
+        <figcaption>냉방용 축열(TES) 시스템의 충전·방열 모드</figcaption>
       </figure>
       <figure class="fig fig--frame" style="--ar:16/9">
         <img src="assets/img/fig-tes-cw-temp-limits.png" alt="실내 온도와 냉수 공급 온도 한계 시뮬레이션" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>4주간의 실내 온도와 냉수 공급 온도 한계. 냉방 수요를 충족하는 온도 범위의 시뮬레이션 결과<span class="src">Oh et al., Appl. Therm. Eng. (2026)</span></figcaption>
+        <figcaption>4주간의 실내 온도와 냉수 공급 온도 한계. 냉방 수요를 충족하는 온도 범위의 시뮬레이션 결과</figcaption>
       </figure>
     </div>
     <div class="numbers">
-      <div><b>1.5%</b><span>학습 구간의 실내 온도 예측오차 CV(RMSE) · E&amp;B 2024</span></div>
-      <div><b>3.8%</b><span>재학습 없이 적용한 외삽 구간의 평균 CV(RMSE) · E&amp;B 2024</span></div>
-      <div><b>+2.55 °C</b><span>축열조 방열 제약을 반영한 평균 냉수 공급 온도 상향 가능 폭 · ATE 2026</span></div>
+      <div><b>1.5%</b><span>학습 구간의 실내 온도 예측오차 CV(RMSE)</span></div>
+      <div><b>3.8%</b><span>재학습 없이 적용한 외삽 구간의 평균 CV(RMSE)</span></div>
+      <div><b>+2.55 °C</b><span>축열조 방열 제약을 반영한 평균 냉수 공급 온도 상향 가능 폭</span></div>
     </div>
   </div>
 </section>
@@ -145,23 +143,21 @@
   </aside>
   <div class="topic__body">
     <h3>연구 문제</h3>
-    <p>건물의 상태와 수요에 맞는 제어 의사결정을 하려면 다양한 운전 전략의 결과를 비교해야 합니다. 실제 건물에서는 실내 쾌적성과 설비 운전 제약 때문에 새로운 전략을 반복해서 시험하기 어렵고, 기존 운영 데이터에도 다양한 제어 조건이 충분히 담겨 있지 않습니다.</p>
-    <h3>연구 방법</h3>
-    <p>물리 시뮬레이션을 빠르게 재현하는 대리모델(Surrogate Model)과 하이브리드 모델을 Python 환경에 통합해 Digital Twin을 구축합니다. 이를 학습 환경으로 활용해 PPO 기반 다중 에이전트가 건물과 설비의 상태를 바탕으로 보일러 2대의 설정 온도·운전 신호와 공조기 운전 신호를 결정하도록 합니다. 제어값의 범위를 정하고 가스 소비량, 쾌적 범위 이탈, 보일러 운전시간 불균형을 보상함수에 반영해 운전 전략을 학습합니다.</p>
+    <p>강화학습 모델이 학습하기 위해서는 많은 에피소드를 수행할 환경이 필요하지만, 실제 건물에서는 설비 운전 제약 때문에 새로운 전략을 반복해서 시험하기 어렵습니다. 따라서 Digital Twin을 에이전트가 학습할 수 있는 환경으로 제공하여 제어를 자율화합니다.</p>
     <div class="figs-1">
       <figure class="fig">
         <img src="assets/img/fig-dt-rl-architecture.png" alt="물리 모델·하이브리드 모델을 결합한 Digital Twin과 강화학습 제어 구조" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>Digital Twin 기반 제어 구조. TRNSYS 물리 모델·대리모델·하이브리드 모델을 결합한 강화학습 환경<span class="src">Oh et al., J. Build. Eng. 120 (2026)</span></figcaption>
+        <figcaption>Digital Twin 기반 제어 구조. TRNSYS 물리 모델·대리모델·하이브리드 모델을 결합한 강화학습 환경</figcaption>
       </figure>
     </div>
     <div class="figs-2">
       <figure class="fig fig--frame" style="--ar:1/1">
         <img src="assets/img/fig-hvac-system-boilers.png" alt="대상 건물 HVAC 시스템 구성" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>대상 건물(15층 사무용)의 HVAC 시스템 구성. 보일러 2대와 공조기<span class="src">Oh et al., J. Build. Eng. 120 (2026)</span></figcaption>
+        <figcaption>대상 건물(15층 사무용)의 HVAC 시스템 구성. 보일러 2대와 공조기</figcaption>
       </figure>
       <figure class="fig fig--frame" style="--ar:1/1">
         <img src="assets/img/fig-rl-boiler-operation.png" alt="보일러 운전시간·효율 비교" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>Digital Twin 내 규칙 기반 제어와 강화학습 제어의 보일러 운전시간·효율 비교<span class="src">Oh et al., J. Build. Eng. 120 (2026)</span></figcaption>
+        <figcaption>Digital Twin 내 규칙 기반 제어와 강화학습 제어의 보일러 운전시간·효율 비교</figcaption>
       </figure>
     </div>
     <div class="numbers">
@@ -180,7 +176,7 @@
       <span class="kicker">Research Directions</span>
       <div>
         <h2>예측과 해석을 제어 의사결정으로 연결합니다</h2>
-        <p>물리·데이터 융합으로 예측 범위를 넓히고, 물리 법칙과 인과관계로 운전 특성을 이해하며, 건물의 상태에 맞는 자율제어로 연결하는 연구를 이어갑니다.</p>
+        <p>물리·데이터 융합으로 예측 범위를 넓히고, 물리 법칙과 인과관계로 운전 특성을 이해하며,<br>건물의 상태에 맞는 자율제어로 연결하는 연구를 이어갑니다.</p>
       </div>
     </div>
     <div class="cols-2">
