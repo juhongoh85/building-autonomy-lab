@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
 <title>Fall detection demo — radar sensor on an edge device</title>
 <meta name="description" content="Fall detection with a radar sensor running on an edge device: non-contact, privacy-preserving, real-time on the device, 100% detection across 25 test scenarios, with an alert to the caregiver's phone or emergency services.">
 <style>
@@ -22,6 +24,10 @@
   /* 포스터(제목 카드)의 연구실명이 높이의 69 % 자리에 있으므로 버튼은 높이 기준 79 % 아래에 둔다 (너비 기준 padding 을 쓰면 좁은 화면에서 겹침) */
   .fdd__ctl span { position: absolute; top: 79%; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; font: 500 15px/1 "Pretendard Variable", sans-serif; letter-spacing: 0.02em; color: var(--accent); border: 1px solid var(--accent); background: rgba(255,255,255,0.92); white-space: nowrap; }
   .fdd__ctl span::before { content: ""; width: 0; height: 0; border-left: 11px solid var(--accent); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+  @media (max-width: 520px) {
+    .fdd__ctl span { padding: 8px 14px; font-size: 13px; gap: 8px; }
+    .fdd__ctl span::before { border-left-width: 9px; border-top-width: 6px; border-bottom-width: 6px; }
+  }
   .fdd.is-playing .fdd__ctl { display: none; }
   .fdd__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--rule); }
   .fdd__bar i { display: block; height: 100%; width: 0; background: var(--accent); }

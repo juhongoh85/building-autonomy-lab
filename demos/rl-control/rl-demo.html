@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
 <title>Optimal control demo — rule-based vs reinforcement learning</title>
 <meta name="description" content="Optimal control demo: a two-boiler heating plant run by its original rule-based logic and by a reinforcement-learning agent, side by side in the same digital twin for the same five winter days. Less gas, balanced boiler run time, same room temperature.">
 <style>
@@ -25,6 +27,12 @@
   .fdd__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--rule); }
   .fdd__bar i { display: block; height: 100%; width: 0; background: var(--accent); }
   /* still mode: used for frame capture — canvas fills the viewport exactly */
+  /* 좁은 화면(홈 iframe·폰): Play 버튼을 작게, 제목 문구 아래로 */
+  @media (max-width: 520px) {
+    .fdd__ctl { padding-bottom: 5%; }
+    .fdd__ctl span { padding: 8px 14px; font-size: 13px; gap: 8px; }
+    .fdd__ctl span::before { border-left-width: 9px; border-top-width: 6px; border-bottom-width: 6px; }
+  }
   body.still .fdd { width: 100vw; height: 100vh; aspect-ratio: auto; border: 0; }
   body.still .fdd__ctl, body.still .fdd__bar { display: none; }
 </style>

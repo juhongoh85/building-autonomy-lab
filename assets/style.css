@@ -244,6 +244,12 @@ body[data-page="index"] .sec-head > .kicker { font-size: 1.375rem; font-weight: 
 .area .fig { margin-top: 18px; }
 .area .link { display: inline-block; margin-top: 14px; font-size: var(--text-small); font-weight: var(--weight-medium); }
 
+/* ---------- 홈: 데모 ---------- */
+.demos { display: grid; grid-template-columns: 1fr 1fr; gap: 44px 36px; }
+.demo h3 { margin-top: 14px; font-size: 1.125rem; line-height: 1.5; }
+.demo p { margin-top: 10px; color: var(--ink-2); font-size: 0.9375rem; line-height: 1.75; }
+.demo__frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; margin-top: 16px; background: #fff; }
+
 /* ---------- 홈: 대표 성과 ---------- */
 .feature { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
 .feature h3 { font-size: 1.1875rem; font-weight: var(--weight-medium); line-height: 1.65; letter-spacing: -0.025em; text-wrap: pretty; }
@@ -405,6 +411,7 @@ body[data-page="professor"] #background .kv { margin-top: 44px; }
   .vis__panel .diagram { max-width: 520px; }
 }
 @media (max-width: 760px) {
+  .demos { grid-template-columns: 1fr; }
   .stair { display: none; }
   .levels-list { display: block; border-top: 1px solid var(--ink); }
   .levels-list li { display: grid; grid-template-columns: 72px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); font-size: 0.95rem; color: var(--ink-2); }
