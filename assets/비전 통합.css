@@ -1,0 +1,40 @@
+/* index-비전통합.html: 전체 비전과 세 가지 연구 방향 */
+.vision-system { border-top: 1px solid var(--ink); padding-top: 32px; }
+.vision-overview { text-align: center; }
+.vision-overview h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: var(--weight-heading); letter-spacing: -0.035em; line-height: 1.45; }
+.vision-title-break { display: none; }
+.vision-overview__lead { margin-top: 16px; color: var(--ink-2); line-height: 1.8; }
+.vision-overview__figure { margin: 30px 0 0; }
+.vision-overview__image { display: block; }
+.vision-overview__image img { width: 100%; height: auto; }
+.vision-overview__figure figcaption { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0 20px; font-size: 0.8125rem; color: var(--muted); text-align: left; }
+.vision-overview::after { content: ""; display: block; height: 34px; width: 1px; margin: 0 auto; background: var(--rule-strong); }
+.vision-directions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; position: relative; padding-top: 30px; }
+.vision-directions::before { content: ""; position: absolute; top: 0; left: calc((100% - 72px) / 6); right: calc((100% - 72px) / 6); height: 1px; background: var(--rule-strong); }
+.vision-direction { position: relative; }
+.vision-direction::before { content: ""; position: absolute; top: -30px; left: 50%; height: 19px; width: 1px; background: var(--rule-strong); }
+.vision-direction__en { font-size: 0.6875rem; font-weight: var(--weight-medium); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); line-height: 1.7; }
+.vision-direction h3 { margin-top: 8px; font-size: 1.125rem; font-weight: var(--weight-heading); line-height: 1.5; color: var(--accent-ink); letter-spacing: -0.025em; }
+.vision-direction__image { display: block; margin-top: 20px; }
+.vision-direction__diagram { width: 100%; height: auto; }
+.vision-direction__diagram text { font-family: var(--sans); font-size: 16px; font-weight: var(--weight-medium); text-anchor: middle; fill: var(--ink-2); }
+.vision-direction__diagram .v-label { font-size: 13px; fill: var(--accent-ink); }
+.vision-direction__diagram .v-text--accent { fill: var(--accent-ink); }
+.v-box { fill: none; stroke: var(--rule-strong); stroke-width: 1.2; }
+.v-box--accent { fill: rgba(30, 95, 168, 0.045); stroke: var(--accent); }
+.v-line { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.v-line--muted { stroke: var(--muted); }
+.v-feedback { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.vision-direction__description { margin-top: 20px; font-size: 0.9375rem; line-height: 1.8; color: var(--ink-2); }
+@media (max-width: 1000px) {
+  .vision-overview { text-align: left; }
+  .vision-title-break { display: initial; }
+  .vision-overview__figure { margin-top: 24px; }
+  .vision-overview__figure figcaption { display: block; padding-bottom: 24px; }
+  .vision-overview::after { width: calc(50% - 9px); height: 28px; margin-left: 9px; background: none; border-top: 1px solid var(--rule-strong); border-left: 1px solid var(--rule-strong); }
+  .vision-directions { grid-template-columns: 1fr; gap: 32px; margin-left: 9px; padding: 8px 0 0 24px; border-left: 1px solid var(--rule-strong); }
+  .vision-directions::before { display: none; }
+  .vision-direction::before { left: -24px; top: 9px; width: 16px; height: 1px; }
+  .vision-direction__image { max-width: 520px; margin-top: 16px; }
+  .vision-direction__description { margin-top: 14px; }
+}

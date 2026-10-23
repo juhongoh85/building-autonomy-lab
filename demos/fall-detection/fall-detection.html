@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fall detection demo — radar sensor on an edge device</title>
+<meta name="description" content="Fall detection with a radar sensor running on an edge device: non-contact, privacy-preserving, real-time on the device, 100% detection across 25 test scenarios, with an alert to the caregiver's phone or emergency services.">
+<style>
+  @font-face {
+    font-family: "Pretendard Variable";
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: block;
+    src: url("../../assets/fonts/PretendardVariable.woff2") format("woff2");
+  }
+  :root { --ink: #20262d; --muted: #66707a; --rule: #e0e4e8; --accent: #1e5fa8; --paper: #fff; }
+  html, body { margin: 0; background: var(--paper); }
+  body { font-family: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; color: var(--ink); }
+  .fdd { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
+  .fdd video { display: block; width: 100%; height: 100%; background: var(--paper); }
+  .fdd__ctl { position: absolute; inset: 0; background: transparent; cursor: pointer; border: 0; padding: 0; }
+  /* 포스터(제목 카드)의 연구실명이 높이의 69 % 자리에 있으므로 버튼은 높이 기준 79 % 아래에 둔다 (너비 기준 padding 을 쓰면 좁은 화면에서 겹침) */
+  .fdd__ctl span { position: absolute; top: 79%; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; font: 500 15px/1 "Pretendard Variable", sans-serif; letter-spacing: 0.02em; color: var(--accent); border: 1px solid var(--accent); background: rgba(255,255,255,0.92); white-space: nowrap; }
+  .fdd__ctl span::before { content: ""; width: 0; height: 0; border-left: 11px solid var(--accent); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+  .fdd.is-playing .fdd__ctl { display: none; }
+  .fdd__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--rule); }
+  .fdd__bar i { display: block; height: 100%; width: 0; background: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="fdd" id="fdd">
+    <!-- 무음본. 나레이션이 든 판은 같은 폴더의 fall-detection.mp4 (src 만 바꾸면 됨) -->
+    <video id="fdd-video" src="fall-detection-silent.mp4" poster="fall-detection-poster.jpg" preload="metadata" playsinline muted
+           aria-label="Fall detection with a radar sensor on an edge device"></video>
+    <button class="fdd__ctl" id="fdd-play" type="button" aria-label="Play"><span>Play</span></button>
+    <div class="fdd__bar" aria-hidden="true"><i id="fdd-bar"></i></div>
+  </div>
+  <script>
+  (function () {
+    var root = document.getElementById("fdd");
+    var video = document.getElementById("fdd-video");
+    var btn = document.getElementById("fdd-play");
+    var bar = document.getElementById("fdd-bar");
+    var label = btn.querySelector("span");
+    btn.addEventListener("click", function () {
+      if (video.ended) { video.currentTime = 0; }
+      video.play();
+    });
+    video.addEventListener("play", function () { root.classList.add("is-playing"); });
+    video.addEventListener("pause", function () { root.classList.remove("is-playing"); });
+    video.addEventListener("ended", function () { root.classList.remove("is-playing"); label.textContent = "Replay"; });
+    video.addEventListener("timeupdate", function () {
+      if (video.duration) { bar.style.width = (100 * video.currentTime / video.duration).toFixed(2) + "%"; }
+    });
+    video.addEventListener("click", function () { if (!video.paused) { video.pause(); } });
+  })();
+  </script>
+</body>
+</html>
