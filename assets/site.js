@@ -17,6 +17,7 @@
   var TAGLINE_EN = "From automation to autonomy: intelligent operation that unites physics and data";
   var HOME_PAGE = "index.html";      // 한글판 홈. sync_deploy.py 가 배포 때 index.html 로 바꿉니다
   var HOME_PAGE_EN = "index.html";            // 영문판 홈 (en/ 폴더 안)
+  var LANG_SWITCH = false;                     // 메뉴의 English/한국어 링크. 한 언어만 올릴 때는 sync_deploy.py 가 배포본에서 false 로 바꾼다
   var PAGES = [
     { id: "research",     href: "research.html",     label: "Research" },
     { id: "projects",     href: "projects.html",     label: "Projects" },
@@ -108,7 +109,7 @@
       '<a class="brand" href="' + homeHref + '">' + mark + '</a>' +
       '<nav class="nav__links" aria-label="' + T.navLabel + '">' + links +
         '<a class="nav__mail" href="mailto:' + EMAIL + '">Contact</a>' +
-        '<a class="nav__lang" href="' + langHref + '" lang="' + T.langSwitchLang + '" hreflang="' + T.langSwitchLang + '">' + T.langSwitch + '</a>' +
+        (LANG_SWITCH ? '<a class="nav__lang" href="' + langHref + '" lang="' + T.langSwitchLang + '" hreflang="' + T.langSwitchLang + '">' + T.langSwitch + '</a>' : '') +
       '</nav>' +
     "</div></header>";
 

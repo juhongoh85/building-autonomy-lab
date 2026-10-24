@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects — 건축설비 자율화 연구실</title>
-<meta name="description" content="건축설비 자율화 연구실 오주홍 교수의 주요 과제 참여 이력과 결과물. 물리 모델과 운영 데이터를 활용한 건물·설비 모델링, Digital Twin, 이상진단, 운전 전략 연구와 설계·성능평가 도구 개발 경험을 소개합니다.">
+<title>Projects — Autonomous Building Systems Research Group</title>
+<meta name="description" content="Research projects and outcomes of Prof. Ju-Hong Oh at the Autonomous Building Systems Research Group: building and HVAC modeling with physics-based models and operational data, digital twins, fault detection and diagnosis, operating strategies, and design and performance evaluation tools.">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
@@ -14,161 +14,161 @@
 
 <main>
 
-<!-- ============ 페이지 머리 ============ -->
+<!-- ============ Page head ============ -->
 <section class="section section--flush">
   <div class="wrap">
     <div class="sec-head sec-head--stack">
       <span class="kicker">Projects</span>
-      <h1>현장의 데이터를 모델링·진단·제어로 연결합니다</h1>
+      <h1>Connecting field data to modeling, diagnosis, and control</h1>
     </div>
   </div>
 </section>
 
-<!-- ============ 01 주요 참여 과제 ============ -->
+<!-- ============ 01 Key projects ============ -->
 <section class="section" id="key-projects">
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">01 · Key Projects</span>
       <div>
-        <h2>주요 참여 과제</h2>
+        <h2>Key Projects</h2>
       </div>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2026.10 – 현재</b>한국인터넷진흥원(KISA)</div>
+      <div class="meta"><b>2026.10 – present</b>Korea Internet &amp; Security Agency (KISA)</div>
       <div>
-        <h3>마이데이터 기반 지능형 누진요금 예측 및 사전경보 서비스(수행 중)</h3>
-        <p>전기 사용량 데이터로 누진 구간 진입을 미리 예측하고 알리는 서비스의 분석 엔진을 개발합니다. 요금 계산식에 청구·검침 이력을 결합해 가구별 사용량을 예측합니다.</p>
+        <h3>MyData-Based Intelligent Progressive-Tariff Prediction and Early Warning Service (ongoing)</h3>
+        <p>We develop the analysis engine for a service that predicts and warns households before their electricity use moves into a higher progressive-tariff tier. Billing and meter-reading histories are combined with the tariff formula to forecast consumption for each household.</p>
         <ul>
-          <li>가구별 전기 사용량 예측과 누진 단계 상향 판정</li>
-          <li>요금 계산식과 실제 사용 이력을 결합한 예측 엔진</li>
-          <li>사전경보 서비스용 분석 모듈 설계</li>
+          <li>Household electricity consumption forecasting and tier-escalation detection</li>
+          <li>Prediction engine combining the tariff formula with actual usage history</li>
+          <li>Design of the analysis module for the early warning service</li>
         </ul>
       </div>
       <figure class="fig fig--frame" style="--ar:3/2">
-        <img src="assets/img/fig-mydata-service-flow.png" alt="마이데이터 수집부터 누진 구간 추적, AI 예측, 경보, 감축 가이드, 재학습까지의 서비스 흐름" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>마이데이터 기반 전력데이터 분석</figcaption>
+        <img src="assets/img/fig-mydata-service-flow.png" alt="Service flow from MyData collection to tariff-tier tracking, AI prediction, alerts, reduction guidance, and retraining" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Power data analytics based on MyData</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2025.04 – 2026.08</b>기후에너지환경부</div>
+      <div class="meta"><b>2025.04 – 2026.08</b>Ministry of Climate, Energy and Environment</div>
       <div>
-        <h3>수열원 변동 대응 대규모 중앙집중형 수열에너지 실증플랜트 기술 개발</h3>
-        <p>수열원의 온도 변화에 대응하는 대규모 히트펌프 시스템의 모델링과 최적제어 연구를 수행했습니다. 히트펌프·축열·건물 부하를 연계한 실증플랜트의 운전 전략을 도출하고 운영을 개선하였습니다.</p>
+        <h3>Large-Scale Centralized Hydrothermal Energy Demonstration Plant Responding to Source-Temperature Variation</h3>
+        <p>We conducted modeling and optimal control research on a large-scale heat pump system that responds to changes in the hydrothermal source temperature. Operating strategies for the demonstration plant were derived by linking heat pumps, thermal storage, and building loads, improving its operation.</p>
         <ul>
-          <li>수열 히트펌프 시스템의 물리 기반 모델링</li>
-          <li>축열과 연계한 운전 전략·제어 알고리즘 검토</li>
-          <li>실증플랜트 적용을 위한 시스템 모델 연계</li>
+          <li>Physics-based modeling of the hydrothermal heat pump system</li>
+          <li>Review of operating strategies and control algorithms coupled with thermal storage</li>
+          <li>Integration of system models for application to the demonstration plant</li>
         </ul>
       </div>
       <figure class="fig fig--frame" style="--ar:1/1">
-        <img src="assets/img/fig-hydrothermal-ai-control.jpg" alt="규칙 기반 정적 제어에서 AI 모델 기반 최적 제어로" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>규칙 기반 정적 제어에서 AI 모델 기반 최적 제어로</figcaption>
+        <img src="assets/img/fig-hydrothermal-ai-control.jpg" alt="From rule-based static control to AI model-based optimal control" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>From rule-based static control to AI model-based optimal control</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2021.05 – 2026.04</b>한국에너지기술평가원</div>
+      <div class="meta"><b>2021.05 – 2026.04</b>Korea Institute of Energy Technology Evaluation and Planning (KETEP)</div>
       <div>
-        <h3>자율운전 기반 지능형 건물 에너지 환경 통합 관리시스템(iBEEMS) 개발</h3>
-        <p>15층 사무용 건물의 BAS 운영 데이터와 설비 사양을 물리 모델에 연결해 Digital Twin을 구축했습니다. 이를 학습 환경으로 활용한 강화학습 제어는 기존 규칙 기반 제어 대비 가스 소비량을 약 23% 절감하였습니다.</p>
+        <h3>Intelligent Building Energy and Environment Management System (iBEEMS) Based on Autonomous Operation</h3>
+        <p>A digital twin of a 15-story office building was built by linking BAS operational data and equipment specifications to physics-based models. Reinforcement learning control trained in this environment reduced gas consumption by about 23% compared with the existing rule-based control.</p>
         <ul>
-          <li>부분 보정과 정격 성능을 결합한 TRNSYS 통합 모델</li>
-          <li>SINN 하이브리드 모델과 대리모델 기반 Digital Twin</li>
-          <li>PPO 기반 다중 에이전트의 보일러 운전 전략 학습·평가</li>
+          <li>Integrated TRNSYS model combining partial calibration with rated performance</li>
+          <li>Digital twin based on a SINN hybrid model and surrogate models</li>
+          <li>Training and evaluation of PPO-based multi-agent boiler operating strategies</li>
         </ul>
       </div>
       <figure class="fig fig--frame" style="--ar:1/1">
-        <img src="assets/img/fig-hvac-system-boilers.png" alt="실증 건물 HVAC 시스템 구성도" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>실증 건물의 HVAC 시스템 구성</figcaption>
+        <img src="assets/img/fig-hvac-system-boilers.png" alt="HVAC system diagram of the demonstration building" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>HVAC system of the demonstration building</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2021.09 – 2022.07</b>한국건물에너지기술원</div>
+      <div class="meta"><b>2021.09 – 2022.07</b>Korea Institute of Building Energy Technology (KBeT)</div>
       <div>
-        <h3>설비상태진단을 위한 TRNSYS 모델 개발 및 학습기반 시스템 모델링</h3>
-        <p>TRNSYS 플랫폼에 운영데이터를 결합하여 설비 파라미터를 최적화한 모델을 구축하였습니다. 이를 활용하여 HVAC 시스템의 이상진단(FDD)을 위한 알고리즘을 개발하였습니다.</p>
+        <h3>TRNSYS Model Development and Learning-Based System Modeling for Equipment Condition Diagnosis</h3>
+        <p>A model with optimized equipment parameters was built by combining operational data with the TRNSYS platform. Using this model, we developed algorithms for fault detection and diagnosis (FDD) of HVAC systems.</p>
       </div>
       <figure class="fig fig--frame" style="--ar:1/1">
-        <img src="assets/img/fig-trnsys-system-model.png" alt="TRNSYS 시스템 모델: 부하 모델·AHU·열원과 유량 분배" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>TRNSYS 시스템 모델 — 부하 모델·AHU·열원과 유량 분배</figcaption>
+        <img src="assets/img/fig-trnsys-system-model.png" alt="TRNSYS system model: load model, AHU, heat source, and flow distribution" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>TRNSYS system model — load model, AHU, heat source, and flow distribution</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2025.05 – 2025.11</b>한국에너지공단</div>
+      <div class="meta"><b>2025.05 – 2025.11</b>Korea Energy Agency</div>
       <div>
-        <h3>제로에너지건축물 실태조사 및 모니터링 운영개선 지원</h3>
-        <p>BEMS 운영 데이터로 제로에너지건축물의 설비 상태와 에너지 사용 특성을 진단하고, 모니터링 체계와 운전 방식의 개선 방안을 검토했습니다.</p>
+        <h3>Survey of Zero-Energy Buildings and Support for Improving Monitoring Operations</h3>
+        <p>Using BEMS operational data, we diagnosed the equipment condition and energy-use characteristics of zero-energy buildings and reviewed improvements to their monitoring systems and operating practices.</p>
       </div>
     </div>
 
     <div class="proj-row">
       <div class="meta"><b>2024.11 – 2025.12</b>Infineon</div>
       <div>
-        <h3>Edge device 레이더 센서 기반 재실자 낙상감지 기술 개발</h3>
-        <p>레이더 센서 데이터로 재실자의 낙상을 감지하는 경량 머신러닝(TinyML) 모델을 개발했습니다. 엣지 디바이스에서 직접 추론하는 경량화된 AI 모델을 개발하고 임베딩하였습니다.</p>
+        <h3>Occupant Fall Detection Using Edge-Device Radar Sensors</h3>
+        <p>We developed a lightweight machine learning (TinyML) model that detects occupant falls from radar sensor data. The compact AI model was embedded on the edge device, where it runs inference directly.</p>
       </div>
       <figure class="fig fig--frame" style="--ar:2.36/1">
-        <img src="assets/img/fig-fall-detection-pipeline.png" alt="FMCW 레이더 신호 처리와 Dual-CNN 추론, 엣지 디바이스 구현" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>FMCW 레이더 신호 처리와 Dual-CNN 추론, 엣지 디바이스 구현</figcaption>
+        <img src="assets/img/fig-fall-detection-pipeline.png" alt="FMCW radar signal processing, dual-CNN inference, and edge-device implementation" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>FMCW radar signal processing, dual-CNN inference, and edge-device implementation</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2023.06 – 2024.01</b>삼성</div>
+      <div class="meta"><b>2023.06 – 2024.01</b>Samsung</div>
       <div>
-        <h3>Digital Twin 에너지 시뮬레이터</h3>
-        <p>냉동기 대상의 Digital Twin 시뮬레이터 모듈입니다. 설계 성능과 운영 데이터를 비교해 운전 상태와 성능 변화를 모니터링함으로써 설비의 경년 변화를 추적하는 도구를 개발하였습니다.</p>
+        <h3>Digital Twin Energy Simulator</h3>
+        <p>A digital twin simulator module for chillers. By comparing design performance with operational data, the tool monitors the operating state and changes in performance, tracking equipment degradation over time.</p>
       </div>
       <figure class="fig fig--frame" style="--ar:16/9">
-        <img src="assets/img/shot-dt-monitoring-program.png" alt="냉동기 COP 실시간 모니터링 프로그램 화면" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>냉동기 성능(COP) 실시간 모니터링 화면. 설계 성능 범위와 현재 운전점</figcaption>
+        <img src="assets/img/shot-dt-monitoring-program.png" alt="Real-time chiller COP monitoring program screen" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Real-time chiller performance (COP) monitoring screen: design performance envelope and current operating point</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2016.11 – 2019.09</b>한국에너지기술평가원</div>
+      <div class="meta"><b>2016.11 – 2019.09</b>Korea Institute of Energy Technology Evaluation and Planning (KETEP)</div>
       <div>
-        <h3>제로에너지빌딩 요소기술 패키지 융복합화 및 실증연구 — ZEB 성능평가 플랫폼</h3>
-        <p>DIN V 18599 기반으로 제로에너지빌딩의 성능을 평가하는 서비스 플랫폼을 개발하였습니다. 제로에너지빌딩 구축을 위한 패시브, 액티브 요소 기술들의 적용을 검토하였습니다.</p>
+        <h3>Integration and Demonstration of Zero-Energy Building Technology Packages — ZEB Performance Evaluation Platform</h3>
+        <p>We developed a service platform that evaluates the performance of zero-energy buildings based on DIN V 18599, and reviewed the application of passive and active technologies for achieving zero-energy buildings.</p>
       </div>
       <figure class="fig fig--frame" style="--ar:16/9">
-        <img src="assets/img/shot-zeb-performance-tool.png" alt="ZEB 성능평가 툴 화면" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>ZEB 성능평가 프로그램의 도면 기반 공간 입력 화면</figcaption>
+        <img src="assets/img/shot-zeb-performance-tool.png" alt="ZEB performance evaluation tool screen" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Drawing-based space input screen of the ZEB performance evaluation program</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2016.12 – 2018.09</b>한국에너지기술평가원</div>
+      <div class="meta"><b>2016.12 – 2018.09</b>Korea Institute of Energy Technology Evaluation and Planning (KETEP)</div>
       <div>
-        <h3>건물용 냉난방배관·순환펌프·유량조절밸브 선정을 위한 수배관시스템 계산 프로그램 개발</h3>
-        <p>냉난방 수배관의 배관·펌프·밸브 선정을 지원하는 계산 프로그램을 개발했습니다. 관경 변화가 유체의 유속 및 밸브 권한도(Valve Authority)에 미치는 영향을 분석하였습니다.</p>
+        <h3>Hydronic System Calculation Program for Selecting Heating and Cooling Pipes, Circulation Pumps, and Flow Control Valves</h3>
+        <p>We developed a calculation program that supports the selection of pipes, pumps, and valves for heating and cooling hydronic systems, and analyzed how changes in pipe diameter affect fluid velocity and valve authority.</p>
       </div>
       <figure class="fig fig--frame" style="--ar:16/9">
-        <img src="assets/img/shot-hydronic-program.png" alt="수배관시스템 계산 프로그램 화면" onerror="this.parentNode.classList.add('is-missing')">
-        <figcaption>수배관시스템 계산 프로그램 화면 — 계통별 배관·펌프·밸브 계산 결과</figcaption>
+        <img src="assets/img/shot-hydronic-program.png" alt="Hydronic system calculation program screen" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Hydronic system calculation program: pipe, pump, and valve results by circuit</figcaption>
       </figure>
     </div>
 
     <div class="proj-row">
-      <div class="meta"><b>2017.12 – 2020.11</b>한국에너지기술평가원</div>
+      <div class="meta"><b>2017.12 – 2020.11</b>Korea Institute of Energy Technology Evaluation and Planning (KETEP)</div>
       <div>
-        <h3>대형사업장의 에너지절감 리트로핏 솔루션</h3>
-        <p>대형 사업장의 에너지 성능 개선을 위해 절감 조치를 진단하고 예상 효과를 산정하는 알고리즘과 프로그램을 개발했습니다.</p>
+        <h3>Energy-Saving Retrofit Solutions for Large Commercial Sites</h3>
+        <p>To improve the energy performance of large commercial sites, we developed algorithms and a program that diagnose energy conservation measures and estimate their expected savings.</p>
       </div>
   </div>
 </section>
 
-<!-- ============ 02 결과품·개발품 ============ -->
+<!-- ============ 02 Results ============ -->
 <section class="section" id="results">
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">02 · Results</span>
       <div>
-        <h2>연구 성과물</h2>
+        <h2>Research Outcomes</h2>
       </div>
     </div>
 
@@ -196,38 +196,38 @@
   </div>
 </section>
 
-<!-- ============ 03 전체 목록 ============ -->
+<!-- ============ 03 Project history ============ -->
 <section class="section" id="history">
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">03 · Project History</span>
-      <h2>과제 참여 이력</h2>
+      <h2>Project History</h2>
     </div>
     <details open>
-      <summary>주요 국가 R&amp;D·산학협력 과제 19건 (2011년 이후)</summary>
+      <summary>19 national R&amp;D and industry collaboration projects since 2011</summary>
       <div style="overflow-x:auto;margin-top:14px">
       <table class="table">
         <thead><tr><th>Period</th><th>Project</th><th>Funder</th></tr></thead>
         <tbody>
-          <tr><td class="mono">2026.10 – 현재</td><td>마이데이터 기반 지능형 누진요금 예측 및 사전경보 서비스(수행 중)</td><td>한국인터넷진흥원</td></tr>
-          <tr><td class="mono">2025.04 – 2026.08</td><td>수열원 변동 대응 대규모 중앙집중형 수열에너지 실증플랜트 기술 개발</td><td>기후에너지환경부</td></tr>
-          <tr><td class="mono">2025.05 – 2025.11</td><td>제로에너지건축물 실태조사 및 모니터링 운영개선 지원</td><td>한국에너지공단</td></tr>
-          <tr><td class="mono">2024.11 – 2025.12</td><td>Edge device 레이더 센서 기반 재실자 낙상감지 기술 개발</td><td>Infineon</td></tr>
-          <tr><td class="mono">2023.06 – 2024.01</td><td>디지털트윈 에너지 시뮬레이터</td><td>삼성</td></tr>
-          <tr><td class="mono">2021.09 – 2022.07</td><td>설비상태진단을 위한 TRNSYS 모델 개발 및 학습기반 시스템 모델링</td><td>한국건물에너지기술원</td></tr>
-          <tr><td class="mono">2021.05 – 2026.04</td><td>자율운전 기반 지능형 건물 에너지 환경 통합 관리시스템(iBEEMS) 개발</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2020.05 – 2024.12</td><td>에너지 절감형 스마트조명 플랫폼 기술 개발 및 실증</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2020.04 – 2021.12</td><td>주택용 전력 품질데이터 AI 분석을 통한 벤치마킹 시스템 개발</td><td>국토교통과학기술진흥원</td></tr>
-          <tr><td class="mono">2019.04 – 2022.12</td><td>노후 소규모 건축물 품질 및 성능 향상을 위한 리모델링 기술 개발</td><td>국토교통과학기술진흥원</td></tr>
-          <tr><td class="mono">2018.10 – 2021.09</td><td>건물에너지 효율향상을 위한 IoT 기기간 연동 지능형 공조제어시스템</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2017.12 – 2021.05</td><td>유통 물류시설 에너지관리용 ESS 기반 융복합 제품 개발 및 실증 연구</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2017.12 – 2020.11</td><td>대형사업장의 에너지절감 리트로핏 솔루션</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2016.12 – 2018.09</td><td>건물용 냉난방배관·순환펌프·유량조절밸브 선정을 위한 수배관시스템 계산 프로그램 개발</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2016.11 – 2019.09</td><td>제로에너지빌딩 요소기술 패키지(패시브&amp;액티브) 융복합화 및 실증연구</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2016.08 – 2017.12</td><td>건물 난방 배관 세정기 기술개발</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2016.04 – 2018.12</td><td>차세대 건자재 공간단위 에너지·환경성능 시험 및 보완을 위한 실증연구</td><td>㈜LG하우시스</td></tr>
-          <tr><td class="mono">2015.06 – 2018.05</td><td>건물에너지 시뮬레이션과 스마트 미터링 기술을 활용한 중소형 건물에너지 통합진단기술 개발 및 실증</td><td>한국에너지기술평가원</td></tr>
-          <tr><td class="mono">2011.09 – 2014.12</td><td>건물에너지 성능 평가모델 및 성능개선 프로세스 표준화 개발</td><td>국토교통부 (단국대학교)</td></tr>
+          <tr><td class="mono">2026.10 – present</td><td>MyData-Based Intelligent Progressive-Tariff Prediction and Early Warning Service (ongoing)</td><td>Korea Internet &amp; Security Agency (KISA)</td></tr>
+          <tr><td class="mono">2025.04 – 2026.08</td><td>Large-Scale Centralized Hydrothermal Energy Demonstration Plant Responding to Source-Temperature Variation</td><td>Ministry of Climate, Energy and Environment</td></tr>
+          <tr><td class="mono">2025.05 – 2025.11</td><td>Survey of Zero-Energy Buildings and Support for Improving Monitoring Operations</td><td>Korea Energy Agency</td></tr>
+          <tr><td class="mono">2024.11 – 2025.12</td><td>Occupant Fall Detection Using Edge-Device Radar Sensors</td><td>Infineon</td></tr>
+          <tr><td class="mono">2023.06 – 2024.01</td><td>Digital Twin Energy Simulator</td><td>Samsung</td></tr>
+          <tr><td class="mono">2021.09 – 2022.07</td><td>TRNSYS Model Development and Learning-Based System Modeling for Equipment Condition Diagnosis</td><td>Korea Institute of Building Energy Technology (KBeT)</td></tr>
+          <tr><td class="mono">2021.05 – 2026.04</td><td>Intelligent Building Energy and Environment Management System (iBEEMS) Based on Autonomous Operation</td><td>KETEP</td></tr>
+          <tr><td class="mono">2020.05 – 2024.12</td><td>Development and Demonstration of an Energy-Saving Smart Lighting Platform</td><td>KETEP</td></tr>
+          <tr><td class="mono">2020.04 – 2021.12</td><td>Benchmarking System Based on AI Analysis of Residential Power Quality Data</td><td>Korea Agency for Infrastructure Technology Advancement (KAIA)</td></tr>
+          <tr><td class="mono">2019.04 – 2022.12</td><td>Remodeling Technologies for Improving the Quality and Performance of Aged Small Buildings</td><td>KAIA</td></tr>
+          <tr><td class="mono">2018.10 – 2021.09</td><td>Intelligent HVAC Control System with IoT Device Interoperation for Building Energy Efficiency</td><td>KETEP</td></tr>
+          <tr><td class="mono">2017.12 – 2021.05</td><td>Development and Demonstration of ESS-Based Integrated Products for Energy Management in Distribution and Logistics Facilities</td><td>KETEP</td></tr>
+          <tr><td class="mono">2017.12 – 2020.11</td><td>Energy-Saving Retrofit Solutions for Large Commercial Sites</td><td>KETEP</td></tr>
+          <tr><td class="mono">2016.12 – 2018.09</td><td>Hydronic System Calculation Program for Selecting Heating and Cooling Pipes, Circulation Pumps, and Flow Control Valves</td><td>KETEP</td></tr>
+          <tr><td class="mono">2016.11 – 2019.09</td><td>Integration and Demonstration of Zero-Energy Building Technology Packages (Passive &amp; Active)</td><td>KETEP</td></tr>
+          <tr><td class="mono">2016.08 – 2017.12</td><td>Development of a Cleaning Device for Building Heating Pipes</td><td>KETEP</td></tr>
+          <tr><td class="mono">2016.04 – 2018.12</td><td>Demonstration Study on Space-Level Energy and Environmental Performance Testing of Next-Generation Building Materials</td><td>LG Hausys</td></tr>
+          <tr><td class="mono">2015.06 – 2018.05</td><td>Integrated Energy Diagnosis for Small and Medium-Sized Buildings Using Building Energy Simulation and Smart Metering</td><td>KETEP</td></tr>
+          <tr><td class="mono">2011.09 – 2014.12</td><td>Standardization of Building Energy Performance Evaluation Models and Performance Improvement Processes</td><td>Ministry of Land, Infrastructure and Transport (Dankook University)</td></tr>
         </tbody>
       </table>
       </div>
