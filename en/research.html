@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Autonomous Building Systems Research Group</title>
+<meta name="description" content="Building Physics, Multiphysics Digital Twin, and Digital Twin-Based Autonomous Control research at the Autonomous Building Systems Research Group: integrating physics-based models with operational data, physics-based interpretation, and autonomous control decisions.">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="research">
+<div id="site-nav"></div>
+
+<main>
+
+<!-- ============ Page head ============ -->
+<section class="section section--flush">
+  <div class="wrap">
+    <div class="sec-head sec-head--stack">
+      <span class="kicker">Research</span>
+      <h1>Understanding buildings through physics and data, and improving how they operate</h1>
+      <p class="lead" style="max-width:66ch">We combine the physical characteristics of buildings and their systems with operational data to predict energy performance and interpret operating behavior. In a digital twin, we train and validate operating strategies, and study autonomous operation that responds to the building's state and demand.</p>
+    </div>
+    <div class="flow">
+      <div class="flow__step"><span class="kicker">01 · Modeling</span><h3 lang="en">Building Physics</h3><p>Physics-based models are calibrated with operational data and their parameters optimized to predict building loads and equipment performance.</p></div>
+      <span class="flow__arrow">→</span>
+      <div class="flow__step"><span class="kicker">02 · Digital Twin</span><h3 lang="en">Integrated Multiphysics Modeling</h3><p>Physics-based models of the building and its systems are integrated and linked with operational data to build a digital twin that reproduces their interactions and operating behavior.</p></div>
+      <span class="flow__arrow">→</span>
+      <div class="flow__step"><span class="kicker">03 · Autonomous Control</span><h3 lang="en">Digital Twin-Based Autonomous Control</h3><p>Control agents are trained in the digital twin, and operating strategies and control performance are evaluated.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 Modeling ============ -->
+<div class="wrap">
+<section class="topic" id="modeling">
+  <aside class="topic__side">
+    <span class="kicker">01 · Modeling</span>
+    <h2><span lang="en">Building Physics</span><small>Modeling building thermal behavior and HVAC performance</small></h2>
+    <div class="papers">
+      <span class="label">Papers</span>
+      <a href="publications.html#p3">J. Build. Eng. 76 (2023)</a><br>
+      <a href="publications.html#p4">Appl. Therm. Eng. 281 (2025)</a><br>
+      <a href="publications.html#p-setpoint">Appl. Therm. Eng. 278 (2025)</a>
+    </div>
+  </aside>
+  <div class="topic__body">
+    <h3>Research problem</h3>
+    <p>In existing buildings, the measured variables and the range of operating conditions are limited, so equipment performance is difficult to characterize from collected data alone. We link operational data from building automation systems (BAS) and building energy management systems (BEMS) to physics-based models to predict indoor temperature, building loads, and heat-source energy consumption.</p>
+    <div class="figs-2">
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-rc-model.png" alt="Structure of the 3R2C model" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>RC (3R2C) model of zone thermal behavior</figcaption>
+      </figure>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-integrated-optimization.png" alt="Comparison of sequential and integrated calibration" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Sequential calibration (top) and integrated calibration (bottom): simultaneous optimization of the load model and the heat exchanger model</figcaption>
+      </figure>
+    </div>
+    <div class="figs-1">
+      <figure class="fig">
+        <img src="../assets/img/fig-ra-temp-cases.png" alt="Indoor temperature prediction results under five conditions" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Optimization process under varying parameter bounds</figcaption>
+      </figure>
+    </div>
+    <h3>Fault detection and diagnosis from operational data</h3>
+    <p>BEMS operational data are used to diagnose overcooling, where indoor temperature falls below the comfort range. A fault detection and diagnosis (FDD) framework that classifies causes by time of occurrence and operating condition, and derives guidelines for improving operation, was applied to an actual office building.</p>
+    <div class="figs-2">
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-fdd-framework.png" alt="Framework for diagnosing building operation from BEMS data" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Framework for diagnosing building operation from BEMS data</figcaption>
+      </figure>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-fdd-overcooling-classification.png" alt="Classification of overcooling pathways" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Classification of overcooling pathways and their conditional probabilities</figcaption>
+      </figure>
+    </div>
+    <div class="numbers">
+      <div><b>R² 0.96</b><span>Explanatory power for predicting daily heat-source energy consumption</span></div>
+      <div><b>About 1/10</b><span>AHU heating-rate prediction error · largest improvement over sequential calibration</span></div>
+      <div><b>No added sensors</b><span>Models built from existing AHU data and design specifications</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 Digital Twin ============ -->
+<section class="topic" id="digital-twin">
+  <aside class="topic__side">
+    <span class="kicker">02 · Digital Twin</span>
+    <h2><span lang="en">Multiphysics Digital Twin</span><small>Hybrid modeling based on physics-based models and operational data</small></h2>
+    <div class="papers">
+      <span class="label">Papers</span>
+      <a href="publications.html#p2">Energy Build. 324 (2024)</a><br>
+      <a href="publications.html#p6">Appl. Therm. Eng. (2026)</a><br>
+      <a href="publications.html#p1">J. Build. Eng. 120 (2026)</a>
+    </div>
+  </aside>
+  <div class="topic__body">
+    <h3>Research problem</h3>
+    <p>Physics-based models struggle to reproduce the characteristics of actual buildings, while data-driven models can lose accuracy under operating conditions they were not trained on. We study digital twins that combine physics-based models with operational data to extend the prediction range even in data-limited settings.</p>
+    <div class="figs-2">
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-sinn-concept.png" alt="Concept diagram of SINN" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Concept of SINN, which combines measured data with a simulation model</figcaption>
+      </figure>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-hybrid-vs-blackbox.png" alt="Extrapolation comparison between a black-box model and a hybrid model" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Indoor temperature prediction for a period not used in training: data-driven model (top) and hybrid model (bottom)</figcaption>
+      </figure>
+    </div>
+    <h3>Application: thermal energy storage for cooling</h3>
+    <p>In a heat pump-coupled thermal energy storage (TES) system, keeping the chilled water colder than necessary lowers operating efficiency. By linking models of relative humidity, cooling load, the cooling coil, and TES discharge, we determine the maximum chilled-water supply temperature that still meets cooling demand. Operational data and physics-based models identify the supply-temperature limit and set a daily TES charging temperature matched to operating conditions.</p>
+    <div class="figs-2">
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-tes-charging-discharging.png" alt="Charging and discharging modes of the thermal energy storage system" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Charging and discharging modes of the TES system for cooling</figcaption>
+      </figure>
+      <figure class="fig fig--frame" style="--ar:16/9">
+        <img src="../assets/img/fig-tes-cw-temp-limits.png" alt="Simulation of indoor temperature and chilled-water supply temperature limits" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Indoor temperature and chilled-water supply temperature limits over four weeks: simulated range that meets cooling demand</figcaption>
+      </figure>
+    </div>
+    <div class="numbers">
+      <div><b>1.5%</b><span>Indoor temperature prediction error, CV(RMSE), over the training period</span></div>
+      <div><b>3.8%</b><span>Mean CV(RMSE) over the extrapolation period, applied without retraining</span></div>
+      <div><b>+2.55 °C</b><span>Average feasible increase in chilled-water supply temperature, accounting for TES discharge constraints</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 Autonomous Control ============ -->
+<section class="topic" id="control">
+  <aside class="topic__side">
+    <span class="kicker">03 · Autonomous Control</span>
+    <h2><span lang="en">Digital Twin-Based Autonomous Control</span><small>Autonomous control based on a digital twin</small></h2>
+    <div class="papers">
+      <span class="label">Papers</span>
+      <a href="publications.html#p1">J. Build. Eng. 120 (2026)</a>
+    </div>
+  </aside>
+  <div class="topic__body">
+    <h3>Research problem</h3>
+    <p>Reinforcement learning needs an environment in which many episodes can be run, but in a real building, operating constraints make it difficult to test new strategies repeatedly. We therefore provide the digital twin as a training environment for the agent, making control autonomous.</p>
+    <div class="figs-1">
+      <figure class="fig">
+        <img src="../assets/img/fig-dt-rl-architecture.png" alt="Digital twin combining a physics-based model and a hybrid model, with the reinforcement learning control architecture" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Digital twin-based control architecture: a reinforcement learning environment combining a TRNSYS physics-based model, surrogate models, and a hybrid model</figcaption>
+      </figure>
+    </div>
+    <div class="figs-2">
+      <figure class="fig fig--frame" style="--ar:1/1">
+        <img src="../assets/img/fig-hvac-system-boilers.png" alt="HVAC system configuration of the target building" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>HVAC system of the target building (15-story office): two boilers and air-handling units</figcaption>
+      </figure>
+      <figure class="fig fig--frame" style="--ar:1/1">
+        <img src="../assets/img/fig-rl-boiler-operation.png" alt="Comparison of boiler operating hours and efficiency" onerror="this.parentNode.classList.add('is-missing')">
+        <figcaption>Boiler operating hours and efficiency under rule-based control and reinforcement learning control in the digital twin</figcaption>
+      </figure>
+    </div>
+    <div class="numbers">
+      <div><b>−23%</b><span>Gas consumption vs. rule-based control · evaluated in the digital twin</span></div>
+      <div><b>98.2%</b><span>Model-based average boiler efficiency · baseline 90.5% · weighted by operating hours</span></div>
+      <div><b>R² 0.97–1.00</b><span>Explanatory power of the surrogate models reproducing TRNSYS results</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ Research directions ============ -->
+<section class="section" id="next">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Research Directions</span>
+      <div>
+        <h2>Connecting prediction and interpretation to control decisions</h2>
+        <p>We extend the range of prediction by integrating physics and data, understand operating behavior through physical laws and causal relationships,<br>and connect both to autonomous control matched to the building's state.</p>
+      </div>
+    </div>
+    <div class="cols-2">
+      <div>
+        <h3>Extending prediction and physics-based interpretation</h3>
+        <ul>
+          <li>Use physical relationships to improve prediction beyond the training range.</li>
+          <li>Interpret equipment operation and energy use through physical laws and causal relationships.</li>
+          <li>Detect changes in equipment performance and recalibrate the digital twin automatically.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Autonomous decision-making based on building state</h3>
+        <ul>
+          <li>Study operating strategies that jointly consider energy efficiency, indoor comfort, and equipment constraints, using model predictive control (MPC) and reinforcement learning.</li>
+          <li>Build on our hydrothermal energy project to study operating strategies that link heat pumps, thermal storage, and building loads.</li>
+          <li>Extend control from individual equipment to the integrated operation of buildings and building clusters, aiming for autonomous control that connects state assessment to strategy selection and execution.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
